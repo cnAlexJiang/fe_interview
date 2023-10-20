@@ -12,7 +12,9 @@
 - 工程化 webpack/rollup
 - 前端基础 vue/react/ts/js/css/html
 - 前端框架 next/astro/taro/
-- 可视化 antv
+- 可视化
+  - 2d antv
+  - 3d threejs
 - 服务端  node/python
 - 服务端框架 prisma/express/nest
   - https://github.com/prisma/prisma-examples/tree/latest/typescript/graphql-nextjs
@@ -26,6 +28,11 @@
 ## 管理
 - tl  https://www.yuque.com/5000tl/tl
 
+## 技术向兴趣
+- Trending
+- juejin
+- v2ex
+
 
 ## 复习节奏
 ### 基础
@@ -37,10 +44,16 @@
   - [] 微前端
   - [] 监控
   - [] 性能指标
+
 - [] js 
   - []  语言特新
   - [] 手写实现
-
+- [] lib
+  - [] vue
+  - [] react
+  - [] lit
+- [] 框架
+  - [] next
 ### 业务
   - [] 架构能力 
   - [] 文档能力
