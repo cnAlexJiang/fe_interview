@@ -9,9 +9,10 @@
 ## 技能
 - 文档能力 uml/业务
   https://w0be5cxszhi.feishu.cn/docx/AATFd0pcooccUgxF1mdcBGQGnnd
-- 工程化 webpack/rollup
+- 工程化 webpack/rollup/vite
 - 前端基础 vue/react/ts/js/css/html
 - 前端框架 next/astro/taro/
+- 拓展能力 worker/wasm
 - 可视化
   - 2d antv
   - 3d threejs
