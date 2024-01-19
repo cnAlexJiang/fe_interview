@@ -5,21 +5,19 @@
   - 业务方向 
     教育saas
 
-
 ## 技能
 - 文档能力 uml/业务
   https://w0be5cxszhi.feishu.cn/docx/AATFd0pcooccUgxF1mdcBGQGnnd
-<<<<<<< HEAD
 - 工程化 webpack/rollup/vite/swc/esbuild
-=======
-- 工程化 webpack/rollup/vite
->>>>>>> e2f570744d615de3ae79d54ae766c4cbc3271185
 - 前端基础 vue/react/ts/js/css/html
 - 前端框架 next/astro/taro/
 - 拓展能力 worker/wasm
 - 可视化
-  - 2d antv
+  - 2d antv 
   - 3d threejs
+- 富文本编辑器
+  - quill 
+  - vue2.7 手动实现
 - 服务端  node/python
 - 服务端框架 prisma/express/nest
   - https://github.com/prisma/prisma-examples/tree/latest/typescript/graphql-nextjs
@@ -28,6 +26,9 @@
 - 基础能力 设计模式/操作系统/数据结构+算法/网络/http
 - 团队管理
 - ai 
+  - openai 
+  - stable difusion
+  - 
 
 
 ## 作品列表
