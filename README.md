@@ -1,12 +1,5 @@
 # fe_interview 准备
 
-## 公司
- - 字节
- - 华为
- - 小米
- - 美篇
- - 
-
 ## 技能
 - 文档能力 uml/业务
   https://w0be5cxszhi.feishu.cn/docx/AATFd0pcooccUgxF1mdcBGQGnnd
@@ -34,6 +27,7 @@
 
 
 ## 作品列表
+- []
 
 ## 管理
 - tl  https://www.yuque.com/5000tl/tl
@@ -50,6 +44,8 @@
   - [] node
     - [x]  基础模块
   - [] webpack 
+    - [] 源码
+      - [] 
     - [] 优化
   - [] cli
   - [] 微前端
