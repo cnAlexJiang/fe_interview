@@ -65,7 +65,11 @@
   - [] react
   - [] lit
 - [] 框架
-  - [] next
+  - SSR 
+    - [] next
+    - [] nuxt
+    - [] Astro
+      - https://docs.astro.build/zh-cn/getting-started/
 ### 基础cs
 - [] tcp ip
   - [] http
