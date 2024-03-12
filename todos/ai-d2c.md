@@ -9,6 +9,11 @@
 ## d2c相关 
 ### 一些调研
 - [] https://semi.design/code/zh-CN/start/introduction
+- [] https://juejin.cn/post/7281948788482637836
+
+
+
+
 
 ### 原理
 
