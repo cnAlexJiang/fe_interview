@@ -14,9 +14,10 @@
   - [] dumi storyBook 为组件开发场景而生的文档工具
 
 - [] 基建源码
-  - [] webpack rollup
+  - [] webpack rollup vite
   - [] babel 
-
+  - [] vtest
+  - [] jest
 
 - [] 可视化
   - [] antV echarts
