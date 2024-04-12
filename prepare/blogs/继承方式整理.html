@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <script>
+    /**
+     * 原型链继承
+     * 原型链继承的弊端在于
+     * 如果子类实例修改了所继承的实例的引用类属性（如对象，数组等），会导致全部的子类实例的属性都被修改：
+     * 
+    **/
+
+
+    // function Parent (name) {
+    //   this.name = name;
+    // }
+    // Parent.prototype.getName = function () {
+    //   return this.name;
+    // }
+
+    // function Child (desc) {
+    //   this.desc = desc;
+    // }
+    // const parent = new Parent('parentName');
+    // Child.prototype = parent;
+    // const child = new Child("这是一个子类实例");
+    // console.log(child.getName(), child.desc); // parentName 这是一个子类实例
+
+
+
+    function Parent (name) {
+      this.name = name;
+      this.type = "initType";
+      this.obj = { key: 'key', value: 'value' }; // 引用类型
+    }
+    Parent.prototype.getName = function () {
+      return this.name;
+    }
+
+    function Child (name, desc) {
+      Parent.call(this, name);
+      this.desc = desc;
+    }
+    Child.prototype = new Parent();
+    const child1 = new Child('name1', 'desc1');
+const child2 = new Child('name2', 'desc2');
+  console.log(child1.getName(), child1.desc, child1.type, child1.obj); // name1 desc1 child1 { key: 'key', value: 'value', customProperty: 'child1' }
+  console.log(child2.getName(), child2.desc, child2.type, child2.obj); // name2 des
+
+
+
+  </script>
+</body>
+
+</html>
