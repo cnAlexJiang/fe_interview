@@ -1,4 +1,4 @@
-# fe_interview 准备
+# 前端积累
 
 ## 技能
 - 文档能力 uml/业务
@@ -19,9 +19,12 @@
   - quill 
   - vue2.7 手动实现
 - 服务端  node/python
+  - 
 - 服务端框架 prisma/express/nest
   - https://github.com/prisma/prisma-examples/tree/latest/typescript/graphql-nextjs
 - 数据库 mysql/mongodb
+  - [] 设计范式
+  - []
 - 云服务  vercel/阿里云
 - 基础能力 设计模式/操作系统/数据结构+算法/网络/http
 - 团队管理
@@ -47,38 +50,62 @@
 - [] 工程化   
   - [] node
     - [x]  基础模块
-  - [] webpack 
-    - [] 源码
-      - qa/工程化-webpack.md
+    - [] 流逝编程
+  - 构建打包
+    - [] webpack 
+      - [] 源码
+        - qa/工程化-webpack.md
+      - 模块联邦
+    - rollup
+    - vite
+    - rspack
+    - [] postcss
+  - 私有npm源 
     - [] 优化
   - [] cli 脚手架制作
   - [] 微前端
   - [] 监控
   - [] 性能指标
   - [] axios 配置 + 源码
+  - [] babel 
+  - [] 
 - 前端业务
  - [] 前端鉴权
 - [] js 
   - []  语言特新
   - [] 手写实现
-- [] lib
-  - [] vue
-  - [] react
-  - [] lit
+ 
 - [] 框架
   - SSR 
     - [] next
     - [] nuxt
     - [] Astro
       - https://docs.astro.build/zh-cn/getting-started/
+### 框架+库
+- [] vue
+- [] vue router
+- [] vuex 
+- [] vue cli
+- [] element plus source
+
 ### 基础cs
+- [] 浏览器原理
+  - [] 同源策略
+  - [] 
 - [] tcp ip
   - [] http
+    - [] v1 v2 v3的区别
+    - [] 浏览器缓存
   - [] https
   - [] socket
-###
 
+### 管理
+  - ppt
+  - 
 
 ### 业务
   - [] 架构能力 
   - [] 文档能力
+
+### 最后多看面经
+  - 面试能力 不等于工作能力
