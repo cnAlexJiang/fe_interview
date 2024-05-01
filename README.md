@@ -30,6 +30,9 @@
   - stable difusion
 
 ## 作品列表
+- [] vue3
+- [] vue2
+- [] react 
 - []
 
 ## 管理
@@ -46,6 +49,8 @@
 - [] 工程化   
   - [] node
     - [x]  基础模块
+    - [] 包管理器 区别 npm yarn  pnpm
+    - [] 模块方式 amd umd cjs 
   - babel
     - [] 插件开发
   - [] vscode
