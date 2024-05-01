@@ -40,14 +40,20 @@
 - juejin
 - v2ex
 
-
 ## 复习节奏
 
 ### 基础fe
 - [] 工程化   
   - [] node
     - [x]  基础模块
+  - babel
+    - [] 插件开发
+  - [] vscode
+    - [] 插件开发
+  - [] codesandbox
+  - [] mono repo
   - [] webpack 
+    - [] 插件开发
     - [] 源码
       - qa/工程化-webpack.md
     - [] 优化
@@ -76,6 +82,7 @@
   - [] http
   - [] https
   - [] socket
+    - [] websocket 实战
 
 
 ### 业务
