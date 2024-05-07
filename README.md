@@ -64,8 +64,18 @@
   - 私有npm源 
     - [] 优化
   - [] cli 脚手架制作
+    - [] umi
+    - [] vue-cli
   - [] 微前端
+    - https://swearer23.github.io/micro-frontends/
+    - [] qiankun   15.4k
+      - [x] 微前端的核心价值 https://zhuanlan.zhihu.com/p/95085796
+    - [] wujie    3.8k  
+    - [] single-spa  13k
+  - codesandbox
   - [] 监控
+     - [] sentry
+
   - [] 性能指标
   - [] axios 配置 + 源码
   - [] babel 
