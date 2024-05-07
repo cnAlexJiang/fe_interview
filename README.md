@@ -79,13 +79,24 @@
   - [] 性能指标
   - [] axios 配置 + 源码
   - [] babel 
-  - [] 
+  - [] react
+    - [] 严格模式 非严格模式区别
+    - [] class component  function component区别
+    - [] 版本之间的区别
+
+  - [] vue
+   - [] vue 源码
+   - [] vue-router 源码
+   - [] vue-class-component 源码
+   - [] vuex
+   - [] vue-i18n
 - 前端业务
  - [] 前端鉴权
 - [] js 
-  - []  语言特新
+  - [] 语言特新
   - [] 手写实现
- 
+- [] 正则表达
+
 - [] 框架
   - SSR 
     - [] next
