@@ -176,6 +176,7 @@
 - [] vue router
 - [] vuex
 - [] vue cli
+- [] vue ssr hydrating开启
 - [] element plus source
 
 ### 基础 cs
