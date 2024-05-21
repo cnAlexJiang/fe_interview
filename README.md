@@ -213,3 +213,11 @@
 ### 开源
 
 - 华为云的低代码 vue3 https://github.com/opentiny
+
+
+
+## 精简整理
+- leetcode
+- 工具链 node npm  
+- 性能+ tcp http
+- 框架掌握
