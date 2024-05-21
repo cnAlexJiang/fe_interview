@@ -32,18 +32,12 @@
 - ai
   - openai
   - stable difusion
+ 
 
-## 作品列表
-
-- []
-
-## 管理
-
-- tl https://www.yuque.com/5000tl/tl
 
 ## 技术向兴趣
 
-- Trending
+- github Trending
 - juejin
 - v2ex
 
@@ -52,7 +46,6 @@
 ### 基础 fe
 
 - [] 工程化
-
   - [] node
     - [x] 基础模块
     - [] 流逝编程
@@ -79,9 +72,12 @@
     - [] single-spa 13k
   - codesandbox
   - [] 监控
-
     - [] sentry
-
+  - 测试 
+    - [] 单元测试
+      - 
+    - [] e2e 端到端测试
+      - 
   - [] 性能指标
     - [] 火焰图
     - [] FP first paint
@@ -125,7 +121,6 @@
     - [x] https://juejin.cn/post/6844904162237366279
     - [] 源码解析
   - [] react
-
     - [] 严格模式 非严格模式区别
     - [] class component function component 区别
     - [] 版本之间的区别
@@ -202,8 +197,9 @@
 
 ### 管理
 
-- ppt
--
+- [] tl https://www.yuque.com/5000tl/tl
+- [] ppt
+- []
 
 ### 业务
 
