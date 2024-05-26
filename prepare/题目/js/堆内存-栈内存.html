@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    堆内存-栈内存
+</body>
+<script>
+ function foo() {
+  var myName = '极客时间'
+  let test1 = 1
+  const test2 = 2
+  var innerBar = { 
+    setName: function(newName) {
+      myName = newName
+    },
+    getName: function() {
+      console.log(test1)
+      return myName
+    }
+  }
+  return innerBar
+}
+var bar = foo()
+bar.setName('极客邦')
+bar.getName()
+console.log(bar.getName())
+/**
+ * 
+ * 然后选择“Memory”标签，点击“take snapshot”获取 V8 的堆内存快照。
+    然后“command + f”（mac）或者“ctrl + f”（win），搜索 setName，然后你就会发现 setName 对象下面包含了 raw_outer_scope_info_or_feedback_metadata，对闭包的引用数据就在这里面。
+*/
+</script>
+</html>
