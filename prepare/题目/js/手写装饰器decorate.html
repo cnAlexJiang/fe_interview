@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    简单的装饰器原理 使用 Object.getOwnPropertyDescriptor
+    <div>
+        <pre>
+            function MyDecorator(target, key, descriptor) {
+                const originMehtod = descriptor.value;
+                descriptor.value = function (...args) {
+                  console.log("before");
+                  const res = originMehtod.apply(this, args);
+                  console.log("after");
+                  return res;
+                };
+                return descriptor;
+              }
+          
+              class Test {
+                testMehthod(a, b, c) {
+                  console.log("test", "a=", a, "b=", b, "c=", c);
+                }
+              }
+              const test = new Test();
+              test.testMehthod = MyDecorator(test.testMehthod).value;
+              test.testMehthod(1, 2, 3);
+        </pre>
+    </div>
+  </body>
+  <script>
+    function MyDecorator(target, key, descriptor) {
+      const originMehtod = descriptor.value;
+      descriptor.value = function (...args) {
+        console.log("before");
+        const res = originMehtod.apply(this, args);
+        console.log("after");
+        return res;
+      };
+      return descriptor;
+    }
+
+    class Test {
+      testMehthod(a, b, c) {
+        console.log("test", "a=", a, "b=", b, "c=", c);
+      }
+    }
+    const test = new Test();
+    test.testMehthod = MyDecorator(
+      Test.prototype,
+      "testMehthod",
+      Object.getOwnPropertyDescriptor(Test.prototype, "testMehthod")
+    ).value;
+    test.testMehthod(1, 2, 3);
+  </script>
+</html>
