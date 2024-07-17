@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="box" style="width: 100%;height: 200px;border: 1px solid #ccc;">
+        <canvas id="canvas"></canvas>
+    </div>
+    <button id="rewrite">重写</button>
+    <button id="confirm">确定</button>
+
+    <div style="margin-top: 100px;">
+        <h3>
+            生成的签名
+        </h3>
+        <img src="">
+    </div>
+    <script>
+        var sign = '' //用于存储最后生成的签名
+        var canvas = document.getElementById('canvas');
+        var ctx = canvas.getContext('2d');
+        //因为touchstart/touchmove只能获取到相对于屏幕的位置，无法直接获取当前手指相对于画布的位置。
+        //而ctx.lineTo()则需要传相对于画布的位置，所以需要用手指相对于屏幕-offsetLeft得到相对于画布的位置。
+        var canvasOffsetLeft = canvas.offsetLeft;
+        var canvasOffsetTop = canvas.offsetTop;
+        canvas.width = box.offsetWidth  // 画布的宽
+        canvas.height = box.offsetHeight // 画布的高  
+        // 移动端需要监听touchstart,如果是pc则可以监听鼠标的事件mousedown 
+        document.querySelector('canvas').addEventListener('touchstart', (event) => { // 移动端需要监听touchstart,如果是pc则可以监听鼠标的事件mousedown 直接e.offsetX
+            event.preventDefault() // 防止书写过程中页面抖动
+            ctx.beginPath()
+        })
+        // 移动端需要监听touchmove,如果是pc则可以监听鼠标的事件mousemove 
+        document.querySelector('canvas').addEventListener('touchmove', (event) => { // 移动端需要监听touchmove,如果是pc则可以监听鼠标的事件mousemove 直接e.offsetX
+            event.preventDefault() // 防止书写过程中页面抖动
+            // 计算出手指相对与画布的位置
+            ctx.lineTo(event.touches[0].pageX - canvasOffsetLeft, event.touches[0].pageY - canvasOffsetTop);
+            ctx.stroke();// 只有调用该方法才会真实的绘制出线条
+        })
+
+        // 重写
+        document.querySelector('#rewrite').addEventListener('click', () => {
+            ctx.clearRect(0, 0, canvas.width, canvas.height);// 清空绘制的内容
+        })
+
+        // 确定
+        document.querySelector('#confirm').addEventListener('click', () => {
+            sign = canvas.toDataURL();// 把绘制完成的canvas转换为base64
+            document.querySelector('img').src = sign
+            console.log(sign)
+        })
+
+    </script>
+</body>
+
+</html>

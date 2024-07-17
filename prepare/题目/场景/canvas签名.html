@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div>
+      <h2>签名</h2>
+      <canvas id="canvas"></canvas>
+    </div>
+  </body>
+  <script defer>
+    document.addEventListener("DOMContentLoaded", function () {
+      console.log("DOM 完全加载和解析");
+    });
+    class Canvas {
+      constructor(props) {
+        console.log(props, "调用构造函数", this);
+        this.element = props.element;
+        this.canvasContext = this.element.getContext("2d");
+        this.events = [];
+        this.width = props.width;
+        this.height = props.height;
+        this.setWidthAndHeight(props.width, props.height);
+      }
+
+      setWidthAndHeight(width, height) {
+        this.element.width = width;
+        this.element.height = height;
+      }
+
+      addEventListener(eventName, eventCallback) {}
+
+      setOrigin(x, y) {
+        this.x1 = x;
+        this.y1 = y;
+      }
+      draw(x, y) {
+        this.canvasContext.beginPath();
+        this.canvasContext.moveTo(this.x1, this.y1);
+        this.canvasContext.lineTo(x, y);
+        this.canvasContext.stroke();
+        this.setOrigin(x, y);
+        this.canvasContext.closePath();
+      }
+    }
+
+    // 用于标识当前用户是否处于按压状态
+    let isDown = false;
+
+    // new 一个画布实例
+    let canvasInstance = new Canvas({
+      element: document.getElementById("canvas"),
+      width: 500,
+      height: 500,
+    });
+    window.canvasInstance = canvasInstance;
+    // 给画布添加“鼠标按下”的监听函数
+    window.addEventListener("mousedown", (target) => {
+      console.log(" 鼠标按下", target.offsetX, target.offsetY);
+      if (!isDown) {
+        // 记录最开始的点位，即按下时的位置
+        canvasInstance.setOrigin(target.offsetX, target.offsetY);
+      }
+      isDown = true;
+    });
+
+    // 给画布添加“鼠标松开”的监听函数
+    window.addEventListener("mouseup", (target) => {
+      isDown = false;
+    });
+
+    // 给画布添加“鼠标移动”的监听函数
+    window.addEventListener("mousemove", (target) => {
+      if (isDown) {
+        // 如果当前用户处于按压状态，说明此时用户在进行签名，那么就执行绘画操作
+        canvasInstance.draw(target.offsetX, target.offsetY);
+      }
+    });
+  </script>
+</html>
