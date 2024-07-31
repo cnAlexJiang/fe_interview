@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+            <canvas id="myCanvas"></canvas>
+
+</body>
+<script>
+ const canvas = document.getElementById('myCanvas');
+        const ctx = canvas.getContext('2d'); //返回一个canvas渲染的上下文，如果不支持返回null
+        ctx.beginPath(); // 开一条新路
+
+        var grd = ctx.createLinearGradient(0, 0, 0, 170); // (x,y,x1,y1) - 创建线条渐变
+        grd.addColorStop("0", "pink");
+        grd.addColorStop("0.5", "white");
+        grd.addColorStop(1, "pink");
+
+        ctx.fillStyle = grd;
+        ctx.arc(200, 200, 100, 0, Math.PI * 2);
+        ctx.fill(); // 画圆
+        ctx.closePath();
+
+</script>
+</html>
