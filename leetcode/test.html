@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+<script>
+
+
+    let test1 = '{}[]()[)]'
+    let test2 = '{[([()([][][])()])]}()'
+    let test3 = '{[(]}'
+
+    let map = {
+        '{':'}',
+        '[':']',
+        '(':')'
+    }
+    function isVaild(str) {
+        let stack = []
+        for (let cur of str){
+            if(map[cur]){
+                stack.push(cur)
+            } else {
+                let last = stack.pop();
+                if(map[last] !== cur ){
+                    console.log('last = ', last, 'cur = ', cur)
+                    return false
+                } 
+            }
+        }
+        return stack.length === 0
+    }
+
+    console.log(isVaild(test1))
+
+    console.log(isVaild(test2))
+
+    console.log(isVaild(test3))
+
+</script>
+</html>
